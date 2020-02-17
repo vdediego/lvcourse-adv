@@ -4,6 +4,7 @@
 namespace App\Orders;
 
 
+use App\Billing\BankPaymentGateway;
 use App\Billing\PaymentGateway;
 
 class OrderDetails
