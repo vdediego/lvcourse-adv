@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Billing\BankPaymentGateway;
-use App\Billing\PaymentGateway;
+use App\Interfaces\PaymentGateway;
 use App\Orders\OrderDetails;
 
 class PayOrderController extends Controller
