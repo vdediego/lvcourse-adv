@@ -20,8 +20,10 @@ class AppServiceProvider extends ServiceProvider
          *
          * It basically says: Whenever the service is called, use this currency as default. So any controller that injects/uses
          * a PaymentGateway object does not need to know how the object needs to be instantiated in order to be used.
+         *
+         * We use singleton because we do not need to have different instances of PaymentGateway every time we invoke the service
          */
-        $this->app->bind(PaymentGateway::class,
+        $this->app->singleton(PaymentGateway::class,
             function ($app) {
                 return new PaymentGateway('usd');
             });
